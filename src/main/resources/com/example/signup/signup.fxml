@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.signup.Controller"
-          alignment="center" hgap="10" vgap="10"
-          prefWidth="1024.0" prefHeight="768.0"
-          maxWidth="Infinity" maxHeight="Infinity">
+<GridPane alignment="center" hgap="10" vgap="10"
+          prefWidth="676.0" prefHeight="517.0"
+          style="-fx-padding: 40; -fx-background-color:#ccffcc;"
+          xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/17.0.12"
+          fx:controller="com.example.signup.Controller">
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-    <TextField fx:id="nameInput" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="nameInput" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-    <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <TextField fx:id="emailInput" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="emailInput" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-    <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <PasswordField fx:id="passInput" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passInput" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-    <Button text="Sign Up" onAction="#handleSignUp" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <Button text="Sign Up" onAction="#handleSignUp"
+            prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-    <Label fx:id="resultLabel" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+    <Label fx:id="resultLabel"
+           GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2"/>
+
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="200"/>
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints minHeight="40"/>
+        <RowConstraints minHeight="40"/>
+        <RowConstraints minHeight="40"/>
+        <RowConstraints minHeight="50"/>
+        <RowConstraints minHeight="50"/>
+    </rowConstraints>
 </GridPane>
