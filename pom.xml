@@ -5,9 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
+<<<<<<< HEAD
     <artifactId>signup</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>signup</name>
+=======
+    <artifactId>demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>demo</name>
+>>>>>>> abc07271fb62293bfdbe0e41cf0a361684337839
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,7 +26,10 @@
             <artifactId>javafx-controls</artifactId>
             <version>17.0.6</version>
         </dependency>
+<<<<<<< HEAD
 
+=======
+>>>>>>> abc07271fb62293bfdbe0e41cf0a361684337839
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
@@ -48,8 +57,13 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
+<<<<<<< HEAD
                     <source>24</source>
                     <target>24</target>
+=======
+                    <source>23</source>
+                    <target>23</target>
+>>>>>>> abc07271fb62293bfdbe0e41cf0a361684337839
                 </configuration>
             </plugin>
             <plugin>
@@ -61,7 +75,11 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
+<<<<<<< HEAD
                             <mainClass>com.example.signup/com.example.signup.HelloApplication</mainClass>
+=======
+                            <mainClass>com.example.demo/com.example.demo.HelloApplication</mainClass>
+>>>>>>> abc07271fb62293bfdbe0e41cf0a361684337839
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
