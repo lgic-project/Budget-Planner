@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="517.0" prefWidth="676.0" spacing="100" style="-fx-padding: 40; -fx-background-color: #ccffcc;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomepageController">
+
+<Label alignment="CENTER" layoutX="8.0" layoutY="-4.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="56.0" prefWidth="301.0" style="-fx-font-size: 32px; -fx-alignment: top-left; -fx-font-weight: bold; -fx-text-fill: green;" text="Budget Planner" textAlignment="CENTER" translateX="-160.0" translateY="-80.0">
+    <font>
+        <Font name="Bell MT" size="12.0" />
+    </font>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <effect>
+        <Glow level="0.0" />
+    </effect>
+</Label>
+
+<HBox accessibleRole="BUTTON" alignment="CENTER" cache="true" cacheHint="SPEED" onDragDetected="#handleAccountsButtonClick" onDragDone="#handleAccountsButtonClick" onDragDropped="#handleAccountsButtonClick" onDragEntered="#handleAccountsButtonClick" onDragExited="#handleAccountsButtonClick" onDragOver="#handleBudgetsGoalsButtonClick" onMouseDragEntered="#handleBudgetsGoalsButtonClick" onMouseDragExited="#handleBudgetsGoalsButtonClick" onMouseDragOver="#handleBudgetsGoalsButtonClick" onMouseDragReleased="#handleBudgetsGoalsButtonClick" onTouchMoved="#handleAccountsButtonClick" onTouchPressed="#handleBudgetsGoalsButtonClick" prefHeight="62.0" prefWidth="455.0" scaleX="0.5" spacing="50" translateX="230.0" translateY="-175.0">
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="accountsButton" mnemonicParsing="false" onAction="#handleAccountsButtonClick" onMouseDragReleased="#handleAccountsButtonClick" prefHeight="25.0" prefWidth="110.0" scaleX="2.0" style="-fx-background-color: #2ecc71;" text="ACCOUNTS" translateX="-115.0" />
+        <Label fx:id="incomeLabel" style="-fx-font-size: 18px; -fx-text-fill: green;" />
+    </VBox>
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="budgetsGoalsButton" mnemonicParsing="false" onAction="#handleBudgetsGoalsButtonClick" prefHeight="25.0" prefWidth="115.0" scaleX="2.0" style="-fx-background-color: #2ecc71;" text="BUDGETS/GOALS" translateX="-20.0" />
+        <Label fx:id="expensesLabel" style="-fx-font-size: 18px; -fx-text-fill: red;" />
+    </VBox>
+</HBox>
+
+<Text style="-fx-font-size: 14px; -fx-fill: #555;" text="Plan your finances, track expenses, and achieve your saving goals." translateX="-1.0" translateY="-150.0">
+    <font>
+        <Font size="9.0" />
+    </font>
+</Text>
+
+</VBox>

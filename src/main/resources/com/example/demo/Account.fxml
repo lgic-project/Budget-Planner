@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="0.0" prefWidth="676.0" scaleZ="0.0" spacing="100" style="-fx-padding: 40; -fx-background-color: #ccffcc;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomepageController">
+
+<Label alignment="CENTER" layoutX="8.0" layoutY="-4.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="56.0" prefWidth="300.0" style="-fx-font-size: 32px; -fx-alignment: top-left; -fx-font-weight: bold; -fx-text-fill: green;" text="Budget Planner" textAlignment="CENTER" translateX="-160.0" translateY="-20.0">
+    <font>
+        <Font name="Bell MT" size="12.0" />
+    </font>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <effect>
+        <Glow level="0.0" />
+    </effect>
+</Label>
+
+<HBox alignment="CENTER" prefHeight="62.0" prefWidth="455.0" scaleX="0.5" spacing="50" translateX="230.0" translateY="-175.0">
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="accountsButton" mnemonicParsing="false" onAction="#handleAccountsButtonClick" prefHeight="25.0" prefWidth="110.0" scaleX="2.0" style="-fx-background-color: #2ecc71;" text="ACCOUNTS" translateX="-115.0" translateY="70.0" />
+        <Label fx:id="incomeLabel" style="-fx-font-size: 18px; -fx-text-fill: green;" />
+    </VBox>
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="budgetsGoalsButton" mnemonicParsing="false" onAction="#handleBudgetsGoalsButtonClick" prefHeight="25.0" prefWidth="115.0" scaleX="2.0" style="-fx-background-color: #2ecc71;" text="BUDGETS/GOALS" translateX="-20.0" translateY="70.0" />
+        <Label fx:id="expensesLabel" style="-fx-font-size: 18px; -fx-text-fill: red;" />
+    </VBox>
+</HBox>
+
+<!-- Background Rectangle -->
+<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="400.0" stroke="BLACK" strokeType="outside" translateX="50.0" translateY="-200.0" width="492.0" x="1.0" />
+
+
+<VBox prefHeight="236.0" prefWidth="0.0" spacing="20" style="-fx-padding: 20;" translateX="50.0" translateY="-700.0">
+    <!-- Expenses Structure -->
+    <VBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10" translateX="50.0">
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Expenses Structure">
+            <font>
+               <Font size="13.0" />
+            </font></Label>
+        <TableView prefHeight="100.0">
+            <columns>
+                <TableColumn prefWidth="100.0" text="Category" />
+                <TableColumn prefWidth="100.0" text="Amount" />
+                <TableColumn prefWidth="100.0" text="Date" />
+            </columns>
+        </TableView>
+    </VBox>
+
+
+    <VBox maxWidth="-Infinity" spacing="10" translateX="50.0">
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Upcoming Planned Payments" />
+        <ListView minHeight="-Infinity" prefHeight="150.0" />
+    </VBox>
+</VBox>
+
+
+</VBox>
